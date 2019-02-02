@@ -1,0 +1,10 @@
+/* Styles for the Time Clock */
+.time {
+  text-align: right;
+  font-size: 10px;
+  color: white;
+  margin-top: 5%;
+  position: relative;
+  right: 3%;
+  top: 12px;
+}
