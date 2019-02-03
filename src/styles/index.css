@@ -1,14 +1,9 @@
 /* Styles used in App.js */
 body {
-  /* text-align: center; */
   padding: 5%;
   background-color: rgb(5, 5, 51);
-  /* background-color: white; */
   color: yellow;
   font-family: Arial;
-  /* background-image: url(chicago-shy-2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat; */
 }
 
 .container {
@@ -32,7 +27,6 @@ body {
 }
 
 .App-title {
-  /* text-align: top; */
   font-size: 30px;
   margin-top: 5%;
 }
@@ -50,11 +44,18 @@ body {
   color: black;
 }
 
+.input-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .inputs {
   text-align: center;
   font-size: 12px;
-  margin-top: 2%;
-  margin-bottom: 25%;
+  font-style: italic;
+  margin-top: 5%;
+  margin-bottom: 2%;
   /* margin-left: 2px; */
   width: 21rem;
   padding: 0.66rem 1rem;
@@ -62,7 +63,7 @@ body {
   border: 1px solid #fff;
   border-radius: 4px;
   /* font-size: 0.77rem; */
-  font-weight: 500;
+  font-weight: 800;
 }
 
 .submit {
@@ -89,7 +90,7 @@ body {
   text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
   color: white;
   font-size: 10px;
-  margin-left: 3px;
+  margin-left: -25px;
   font-family: Georgia, serif;
   text-decoration: none;
   vertical-align: middle;
@@ -126,7 +127,6 @@ body {
 }
 
 .Clock-seconds {
-  /* background-color: rgb(221, 165, 0); */
   background-color: rgba(255, 192, 0, 0.45);
 }
 
@@ -135,23 +135,12 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   position: absolute;
-  top: 1032px;
   left: 5px;
-  /* grid-column-gap: 1em;
-  grid-row-gap: 1em; */
   font-size: 12px;
   grid-gap: 1em;
   background-color: rgb(5, 5, 51);
   cursor: pointer;
 }
-
-/* .block:defined {
-  background-color: red;
-} */
-
-/* .block:visited {
-  background-color: red;
-} */
 
 .block:hover {
   background-color: #28597a;
@@ -186,4 +175,60 @@ body {
   filter: brightness(90%);
   margin-left: -35px;
   cursor: pointer;
+}
+
+/* MEDIA QUERY 1 */
+@media only screen and (max-width: 640px) {
+  .container {
+    background-image: url("ChicagoSkyline-11.jpg");
+    /* width: 100%; */
+  }
+
+  .time {
+    font-size: 9px;
+  }
+
+  .App-title {
+    font-size: 25px;
+  }
+
+  .span {
+    font-size: 40px;
+  }
+
+  .Clock-days,
+  .Clock-hours,
+  .Clock-minutes,
+  .Clock-seconds {
+    display: inline;
+    margin: 10px;
+    color: yellow;
+    font-size: 20px;
+  }
+
+  .inputs {
+    width: 15rem;
+  }
+
+  .instructions {
+    font-size: 14px;
+    margin-top: 100px;
+  }
+
+  .wrapper {
+    font-size: 9px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .event-img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* MEDIA QUERY 2 */
+@media screen and (max-width: 320px) {
+  .container {
+    width: 320px;
+  }
 }

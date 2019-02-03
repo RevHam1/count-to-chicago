@@ -60,7 +60,7 @@ class App extends React.Component {
 
           <div className="App">
             <div className="App-title">
-              Countdown to: {this.state.chicagoEvent}
+              Countdown to {this.state.chicagoEvent}
               <br />
               <div className="span">
                 <span>{this.state.deadline}</span> <br />
@@ -70,31 +70,33 @@ class App extends React.Component {
             <Counter deadline={this.state.deadline} />
 
             <div className="Deadline-input">
-              <input
-                className="inputs"
-                value={this.state.chicagoEvent}
-                onChange={this.handleChange}
-                placeholder="Name of event"
-              />
+              <div className="input-div">
+                <input
+                  className="inputs"
+                  value={this.state.chicagoEvent}
+                  onChange={this.handleChange}
+                  placeholder="Name of event"
+                />
 
-              <input
-                className="inputs"
-                value={this.state.newDeadline}
-                onChange={this.changeDate}
-                placeholder="Month day, year"
-              />
+                <input
+                  className="inputs"
+                  value={this.state.newDeadline}
+                  onChange={this.changeDate}
+                  placeholder="Month day, year"
+                />
+              </div>
               <button className="submit" onClick={this.changeDeadline}>
                 Submit
               </button>
               <div className="instructions">
                 <br />
                 <p>
-                  To display Event and Countdown time at the top, double click
-                  an item below
+                  To auto-display Event and Countdown time at the top, double
+                  click an item below
                 </p>
                 <p>
-                  To display your own event enter a name & date in the above
-                  boxes then click submit
+                  To enter your own event place a name & date in the above boxes
+                  then click submit
                 </p>
               </div>
             </div>
